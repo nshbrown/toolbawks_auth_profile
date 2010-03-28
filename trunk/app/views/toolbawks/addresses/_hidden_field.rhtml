@@ -1,0 +1,7 @@
+<%= hidden_field(
+  :address, 
+  field_column, 
+  :name => "#{address_alias}_address[#{field_column}]", 
+  :id => address_alias + '_address_' + field_column,
+  :value => params["#{address_alias}_address"] && params["#{address_alias}_address"][field_column] ? params["#{address_alias}_address"][field_column] : false
+) %>
